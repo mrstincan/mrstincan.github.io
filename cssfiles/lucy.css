@@ -3,7 +3,7 @@
         without having to go back and forth! 
         */
 :root {
-    --bgcolor: #161617; /*  background colour*/
+    --bgcolor: #fff; /*  background colour*/
     --fontsize:12px; /* Font Size for most if not all universally readable bodys/posts/containers etc*/
     --fontsmall:10px; /* smaller fontsize for smaller things */
     

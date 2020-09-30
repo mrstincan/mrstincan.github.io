@@ -3,13 +3,13 @@
         without having to go back and forth! 
         */
 :root {
-    --bgcolor: #fff; /*  background colour*/
+    --bgcolor: #161617; /*  background colour*/
     --fontsize:12px; /* Font Size for most if not all universally readable bodys/posts/containers etc*/
     --fontsmall:10px; /* smaller fontsize for smaller things */
     
     
-    --background: url('https://abload.de/img/bghildaewjf5.png');
-    --divider:  url('https://abload.de/img/bghildadiv6uk93.png');
+    --background: url('https://abload.de/img/bg-lucyqnkcn.png');
+    --divider:  url('https://abload.de/img/bg-lucy-divboj2u.png');
     
     --padding:10px;
     --pad2:calc(var(--padding) * 2);

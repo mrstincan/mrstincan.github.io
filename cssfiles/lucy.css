@@ -30,8 +30,8 @@
     --text: #fff;        /* text colour */
     --bold: #a1bec3;        /* bold text colour */
     --italics: #86b486;     /* italics text colour */
-    --link: #d3466d;           /* link colours */
-    --hover: #71162a;       /* links on hover colour */
+    --link: #d27f96;           /* link colours */
+    --hover: #d3466d;       /* links on hover colour */
     --border:#1f1f21;   /* color of all borders, including blockquote */
     --shadow:rgba(5,0,0,0.4);   /* colour of text and box-shadows */
     --museinfo1:#86a8ae;   /*   Kind of like an accent colour */

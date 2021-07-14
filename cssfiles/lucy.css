@@ -28,9 +28,9 @@
         you can put any HEX, RGB/RGBA color code here!  */
 
     --text: #fff;        /* text colour */
-    --bold: #69a369;        /* bold text colour */
-    --italics: #a1bec3;     /* italics text colour */
-    --link: #b02f53;           /* link colours */
+    --bold: #a1bec3;        /* bold text colour */
+    --italics: #86b486;     /* italics text colour */
+    --link: #d3466d;           /* link colours */
     --hover: #71162a;       /* links on hover colour */
     --border:#1f1f21;   /* color of all borders, including blockquote */
     --shadow:rgba(5,0,0,0.4);   /* colour of text and box-shadows */

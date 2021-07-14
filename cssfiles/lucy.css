@@ -29,12 +29,12 @@
 
     --text: #fff;        /* text colour */
     --bold: #fff;        /* bold text colour */
-    --italics: #6b87ab;     /* italics text colour */
-    --link: #6b87ab;           /* link colours */
-    --hover: #313960;       /* links on hover colour */
+    --italics: #86a8ae;     /* italics text colour */
+    --link: #b02f53;           /* link colours */
+    --hover: #71162a;       /* links on hover colour */
     --border:#1f1f21;   /* color of all borders, including blockquote */
     --shadow:rgba(5,0,0,0.4);   /* colour of text and box-shadows */
-    --museinfo1:#6b87ab;   /*   Kind of like an accent colour */
+    --museinfo1:#86a8ae;   /*   Kind of like an accent colour */
     
     
     /* Customize how your tooltip looks like! (when you hover over link)*/

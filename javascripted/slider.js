@@ -27,13 +27,16 @@ scrollPlane.classList.add("c" + INITAL_CONTAINER);
 
 function buttonCallback(event) {
     for(let i = 0;i < buttons.length;i++) {
-        if(event.srcElement == buttons[i]) {
-            for(let j = 0;j < buttons.length;j++) {
-                if(i == j) {
-                    scrollPlane.classList.add("c" + j);
-                } else {
-                    scrollPlane.classList.remove("c" + j);
+        for(let j = 0;j < event.path.length;j++) {
+            if(event.path[j] == buttons[i]) {
+                for(let k = 0;k < buttons.length;k++) {
+                    if(i == k) {
+                        scrollPlane.classList.add("c" + k);
+                    } else {
+                        scrollPlane.classList.remove("c" + k);
+                    }
                 }
+                break;
             }
         }
     }

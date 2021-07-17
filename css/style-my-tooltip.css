@@ -1,0 +1,22 @@
+/* style-my-tootltips plugin, tooltip styling */
+#s-m-t-tooltip{
+	/* basic */
+	max-width:300px;
+	margin:30px 15px 0px 25px;
+	/* style and design */
+	padding:5px;
+	background:transparent;
+	/* font */
+	font-family: var(--font);
+	font-size:var(--fontsz);
+	color:var(--tooltip);
+	text-shadow:1px 1px 0px var(--toolborder), /* TEXT SHADOW */
+      	1px -1px 0px var(--toolborder),
+      	-1px -1px 0px var(--toolborder),
+      	-1px 1px 0px var(--toolborder),
+      	0px 1px 0px var(--toolborder),
+      	0px -1px 0px var(--toolborder),
+      	1px 0px 0px var(--toolborder),
+      	-1px 0px 0px var(--toolborder);
+	z-index:999999999999999999999;
+}

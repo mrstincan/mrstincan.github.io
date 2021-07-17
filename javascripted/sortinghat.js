@@ -1,20 +1,19 @@
 $(document).ready(function() {
- var $container = $(".grid"); // the container with all the elements to filter inside
- var filters = {}; //should be outside the scope of the filtering function
- /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $container = $("#content"); 
+ var filters = {};
  var $grid = $container.isotope({
-   itemSelector: ".item", // the elements to filter
-   percentPosition: true // put true if you use percentage widths, otherwise put false
+   itemSelector: ".box",
+   percentPosition: false 
  });
  $(".option-set a").click(function(e) {
    var $this = $(this); // cache the clicked link
    var filterAttr = "data-filter-value";
    var filterValue = $this.attr(filterAttr); // cache the filter
    var $optionSet = $this.parents(".option-set"); // cache the parent element
-   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group 
    var filterGroup = filters[group];
    if (!filterGroup) {
-     filterGroup = filters[group] = [];
+     filterGroup = filters[group] = []; 
    }
    var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
    var activeClass = "selected", // the class for active links

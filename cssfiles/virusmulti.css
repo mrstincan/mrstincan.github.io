@@ -563,7 +563,7 @@ pre {
       -1px 1px 0px var(--shadow),
       0px 1px 0px var(--shadow),
       0px -1px 0px var(--shadow),
-      1px 0px 0px var(--shadow),
+      1px 0px 0px var(--shadow);
     -webkit-transition: all 0.9s ease;
     -moz-transition: all 0.9s ease;
     -o-transition: all 0.9s ease;
@@ -579,7 +579,7 @@ pre {
 
                                 /* ASKS */
 .fus { /*Asker*/
-    color:var(--link);
+    color:var(--bgcolor);
     position: relative; 
     margin: 0px; 
     margin-bottom:10px;
@@ -882,14 +882,6 @@ pre {
     overflow:auto;
     padding:5px;
     padding-left:30px;
-    text-shadow:1px 1px 0px #000, 
-      1px -1px 0px #000,
-      -1px -1px 0px #000,
-      -1px 1px 0px #000,
-      0px 1px 0px #000,
-      0px -1px 0px #000,
-      1px 0px 0px #000,
-      -1px 0px 0px #000;
 }
                             /*      V E R S E S    */
 ver {

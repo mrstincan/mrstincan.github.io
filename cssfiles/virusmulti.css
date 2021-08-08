@@ -1,5 +1,3 @@
-
-
 html {
     height: 100%;
     width: 100%;
@@ -1156,10 +1154,9 @@ img.drop_title {
 
 .musebox {
     position:fixed;
-    width: 465px;
-    height:90%;
-    left:395px;
-    display:inline-block;
+    left:95px;
+    display: flex;
+    width:360px;
     background:var(--bgcolor);
     border:4px double var(--border);
     padding:10px;
@@ -1167,12 +1164,36 @@ img.drop_title {
     overflow:auto;
 }
 
-.biobox {
+.biobox1 {
     position:fixed;
-    width: 540px;
-    left:905px;
-    height:90%;
-    display:inline-block;
+    left:95px;
+    width:360px;
+    height:640px;
+    background:var(--bgcolor);
+    border:4px double var(--border);
+    padding:10px;
+    margin:10px;
+    margin-top:180px;
+    overflow:auto;
+}
+
+.biobox2 {
+    position:fixed;
+    left:calc(360px + 150px);
+    width:360px;
+    height:820px;
+    background:var(--bgcolor);
+    border:4px double var(--border);
+    padding:10px;
+    margin:10px;
+    overflow:auto;
+}
+
+.biobox3 {
+    position:fixed;
+    left:calc(360px*2 + 205px);
+    width:360px;
+    height:820px;
     background:var(--bgcolor);
     border:4px double var(--border);
     padding:10px;
@@ -1250,14 +1271,6 @@ hit#tab click.active {
 bio#toggles {
     text-align:center;
     color:#fff;
-    text-shadow:1px 1px 0px var(--border), 
-      1px -1px 0px var(--border),
-      -1px -1px 0px var(--border),
-      -1px 1px 0px var(--border),
-      0px 1px 0px var(--border),
-      0px -1px 0px var(--border),
-      1px 0px 0px var(--border),
-      -1px 0px 0px var(--border);
 }
  
  

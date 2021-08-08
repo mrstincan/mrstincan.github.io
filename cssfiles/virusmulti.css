@@ -259,7 +259,7 @@ pre {
       0px -1px 0px var(--shadow),
       1px 0px 0px var(--shadow),
       -1px 0px 0px var(--shadow);
-    background:rgba(0, 0, 0, 0.6); /* TEXT BACKGROUND */
+    background:rgba(224, 177, 191, 0.6); /* TEXT BACKGROUND */
     background-image:url('');           /*  SET AN IMAGE AS BACKGROUND */
     background-repeat: no-repeat;
     background-attachment: fixed;

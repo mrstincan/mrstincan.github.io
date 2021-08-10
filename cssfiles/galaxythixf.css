@@ -162,7 +162,7 @@ blockquote {
 }
 
 blockquote img {
-    max-width:calc(var(--width) - var(--pad2) * 2)!important;
+    max-width:calc(520px - var(--pad2) * 2)!important;
     height:auto;
 }
 

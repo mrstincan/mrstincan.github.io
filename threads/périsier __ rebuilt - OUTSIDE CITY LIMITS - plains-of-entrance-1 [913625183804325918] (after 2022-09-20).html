@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang=en><head><title>p&#233;risier || rebuilt - plains-of-entrance-1</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);font-family:Whitney;font-weight:300}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);font-family:Whitney;font-weight:400}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);font-family:Whitney;font-weight:500}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);font-family:Whitney;font-weight:600}@font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);font-family:Whitney;font-weight:700}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reference-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reference{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reference-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reference-author{margin-right:0.3rem;font-weight:600}.chatlog__reference-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reference-link{cursor:pointer}.chatlog__reference-link *{display:inline;pointer-events:none}.chatlog__reference-link .chatlog__markdown-quote{display:inline}.chatlog__reference-link .chatlog__markdown-pre{display:inline}.chatlog__reference-link:hover{color:#ffffff}.chatlog__reference-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reference-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__bot-label{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-generic-image{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{border-radius:3px;padding:0 2px;color:#a3a6aa}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=channel-pinned-message-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=guild-member-join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src=https://cdn.discordapp.com/icons/908933861797425232/48607684ab5c6a0774b2e78449e612c8.png alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>p&#233;risier || rebuilt</div><div class=preamble__entry>OUTSIDE CITY LIMITS / plains-of-entrance-1</div><div class="preamble__entry preamble__entry--small">After 20-Sep-22 12:00 AM</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1024072421159993394 class=chatlog__message-container data-message-id=1024072421159993394><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/203503394864758784/8770e67cf6588e30f77c20c6897c3e37.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,105,180) title=LIARLIAR#7436 data-user-id=203503394864758784>bapho</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024072421159993394>26-Sep-22 11:38 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--inline">nwn.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024073563575177226 class=chatlog__message-container data-message-id=1024073563575177226><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024073563575177226>26-Sep-22 11:42 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>And so — the beasts are eventually dispatched. A lance that turns into a broadsword, now, shaking his weapon in the air, he disposes of the <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">blood</span> spilled.  
+
+Bringing up the blade to the curve of his elbow, he cleans it in his clothing — removing leftover animal matter.
+
+He doesn&#39;t speak, not even removing the hair from his face. Not gonna confront her — not gonna risk it.
+
+Once he sheathes his sword — he begins moving away from Kain&#233;. Having grown used to that — <em>being nobody.</em>
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024077219590574210 class=chatlog__message-container data-message-id=1024077219590574210><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024077219590574210>26-Sep-22 11:57 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>During the fight, she had staggered. When <em>he</em> came into view, it felt like her head was exploding. Would he not have been there to help her, the beasts might have gotten her because of it.
+
+No... if he wouldn&#39;t have been there, she wouldn&#39;t have felt this way. She wouldn&#39;t have felt as if her brain was <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">vomiting</span> up images and feeling. Wouldn&#39;t have felt the need to protect him. <em>Wouldn&#39;t have felt like this was all she&#39;s ever done before, and all she ever wanted.</em>
+
+The movement. The battle cries and grunts. The way his sword clashed and <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">ripped through</span> the monsters. It all felt too familiar. They have done this before. <em>Not just once.</em> <em>She recognised him.</em> Recognised him as the one watching her when she first arrived. Recognised him as the phantom she thought she saw when she was attacked by the monsters in the forest.
+
+<em>Recognised him as the one calling out for her in her dream.</em> 
+
+As he turns to leave, Kain&#233; practically lunges at him, grabbing his shoulder to force herself in front of him, face painted with scorn as her hands grabbed him by the collar. &quot;Where the hell do you think you&#39;re going?&quot; Angry gaze glued on his face as it burns itself into her head, making Kain&#233; feel like the world around her was turning a blinding shade of white.
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span> and I oop.....</div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024079712697458698 class=chatlog__message-container data-message-id=1024079712697458698><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024079712697458698>27-Sep-22 12:07 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Silence falls — of course. Not fast enough to leave, though, he&#39;s not brave enough to stay, either. He <em>knows</em>, of course. He&#39;s not supposed to be here. He&#39;s supposed to be <em>gone</em>. The only way she could be free.
+
+And — still. A touch unfamiliar. He just raises his hands when grabbed — showing no intent to fight. Standing, <em>dead weight</em>.
+
+“ — I was foraging, and you looked like you needed help. ”
+
+A lie — well. Nit fully, but, it was true that he was foraging. Even if he&#39;d deviated from his path once he&#39;d heard attacks could become more commonplace.
+
+“ I&#39;m sorry. I shouldn&#39;t be here - I shouldn&#39;t be - ”
+
+He&#39;s trying to make excuses, tripping over his own words. Complex confusion in a mind he&#39;d thought long gone.
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span> smile emoji momento........</div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024082781589995642 class=chatlog__message-container data-message-id=1024082781589995642><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024082781589995642>27-Sep-22 12:19 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The longer she looks at him, the more she feels like she&#39;s going blind. As if her mind was trying to fill every void with his image as scenes flashed before here eyes, causing her to squint and turn her face away from him, still contorted in anger.
+
+&quot;Shut up.&quot; Words sneered in a familiar fashion in which she&#39;d usually curse a certain <em>book.</em> <em><strong>&quot;Shut. Up.&quot;</strong></em>
+
+Kain&#233; felt her hands trembling, but she&#39;d not let go. If she let go, he might disappear.
+
+Forcing her eyes open, she looks at him again, and suddenly, everything felt like it was making sense. Like he has always been hiding in the back of her mind. The feeling of something missing... <em>but why. Why did he leave her memories? Why did he abandon her? Has he been here the past 3 years?</em>
+
+&quot;Who the FUCK do you think you are... to just up an disappear like that, huh?&quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span> <img loading="lazy" class="chatlog__emoji " alt="unless" title="unless" src="https://cdn.discordapp.com/emojis/909837637970432052.png"></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024175566112440381 class=chatlog__message-container data-message-id=1024175566112440381><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024175566112440381>27-Sep-22 06:28 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>There is a familiarity — it stings. Hurts. Who do you think you are. 
+
+It was the only way, wasn&#39;t it? The only way. She couldn&#39;t — she shouldn&#39;t remember. Maybe here was different — but what if it wasn&#39;t? 
+
+Concern washes over his face, not knowing wether to speak or stay silent, to calm down or run or to just stand there, detached.
+
+Words cut through him — piercing, stabbing, running him through.
+
+“ I had to. ”
+
+That&#39;s it. That&#39;s all it was. Arms left to hang dejectedly, no fight is put up as he looks straight at her, gaze meeting hers.
+
+“ ...If I hadn&#39;t, you&#39;d be dead. I&#39;m not supposed to exist anymore, I — . ”
+
+But it was alright. He could exist here, seemingly — for now, he could be there. Physically. Present, tangible, <em>real</em>.
+
+“ ...I&#39;m sorry. ”
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024355010114490448 class=chatlog__message-container data-message-id=1024355010114490448><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024355010114490448>27-Sep-22 06:21 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>I had to.</em> Hearing those words hurt. The grip she has on him tightens, fabric of her gloves stretching over her knuckles.
+
+There&#39;s a sour taste in her mouth. <em>You&#39;d be dead.</em> She recalled the fight, how he defeated the shadowlord. How Tyrann took over and she went Gestalt... how she came back to, <em>cured</em>, confused... right... She was a monster... why would he save her instead of being with his sister?
+
+&quot;What about Yonah? Emil? The town?&quot; <s>What about us?</s> &quot;Is this where you fucked off to for the past 3 years?&quot; 
+
+All these emotions and memories that washed over her made her feel like she was a different person - no - like she was <em>herself</em> again. For 3 years her mind was muddled, dreams haunted by his voice, telling her to go on living.
+
+Teeth grit in anger, and her vision blurred. <em>A hard case of wet-anger.</em> Feeling disgustingly weak as she blinks away tears that dare form in her eyes, voice shaking.
+
+&quot;I don&#39;t care if you should or should not fucking exist... why were you avoiding me... do you...&quot; She cuts off her sentence, biting her lip. Hah... of course.... of course he must hate her. He had to disappear so she could live. How could he not hate her? Her grip loosens and her gaze falls. 
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024360008382693487 class=chatlog__message-container data-message-id=1024360008382693487><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024360008382693487>27-Sep-22 06:40 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot; Three years... &quot;
+
+No, he hadn&#39;t. Truthfully, he didn&#39;t even know -- ah. Still. Confusion washes over him. Concern. Consideration for a choice taken lightly.
+
+&quot; No... I... Woke up here. Last thing I remember, I had seen you for the last time. I... Thought that was it. Yonah... E-Emil is alright? I knew he would -- ah. I... Kain&#233;. I... I thought if you saw me you&#39;d... Be in danger again. Or worse. Or that you&#39;d hate me. Or, well, I really couldn&#39;t bear the wight of you not remembering me - of meeting you as a stranger, you know? &quot;
+
+It&#39;s strange.
+
+...He really didn&#39;t give much thought to his life. Only Yonah. Emil. Kain&#233;. Hell, even Weiss.
+
+He doesn&#39;t express much. Only part-words. Ramblings. He&#39;s struggling to hold back emotion - maintaining a strong face -- innocent in intent, but, it still cracks. Under his words. Under his thoughts. He&#39;s just looking at her. Quietly. Once released, his arms hang dejectedly.
+
+He stops.
+
+&quot; If I&#39;d met you and you didn&#39;t know me, I wouldn&#39;t want to live anymore. &quot;
+
+There is a pause. Calm voice returning to him as he <em>reaches</em> for her. 
+A hand nearing her face.
+
+&quot; Please don&#39;t cry. &quot;
+
+He&#39;s not fully reaching yet. Not pressing his hand against her. Unable -- or, rather, unaware of how to properly react. In all confusion and worry, he&#39;s begun to tear up as well.
+
+Even if he&#39;s purposefully ignoring that.
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024368521154678814 class=chatlog__message-container data-message-id=1024368521154678814><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024368521154678814>27-Sep-22 07:14 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>A chuckle forces her lips to part, although it sounds more like a sob. 3 Years... she spend 3 years without him... and for him it&#39;s seemingly only been a moment.
+
+<em>A moment was enough for him to discard me? .... Don&#39;t cry. Don&#39;t cry. Don&#39;t cry.</em> As much as she&#39;s been trying to force herself to stop this ugly display of weakness, convincing herself not to cry, his words were the ones tearing her apart.
+
+The moment the tears start rolling down her face, one hand lets go of him, covering her eyes as if to hide it. Hide her tears. Her pain. Her foolishness.
+
+&quot;You&#39;d rather die than get to know me again. You&#39;d rather die than make me remember you.&quot; Emotions were burning inside her. One moment, he was a stranger, the next her heart was filled with love and heartache. <em>It was too much.</em> 
+
+Suddenly, she lets go of him, as if all her strength had left her. &quot;It&#39;s always like this... discarded, unwanted. I can&#39;t say I&#39;m not used to it but I-&quot; Shut up, girl. He&#39;s made up his mind. Stop bothering him with your bitchass emotions.
+
+She peers through her fingers, ignoring the pain she feels when looking at him. <em>Why was <strong>he</strong> crying now?</em> Kain&#233; didn&#39;t want to go, didn&#39;t want to leave his side, wanted to travel and fight by his side and be his sword again. Why? <em>Why?</em> &quot;I thought you were different, <em>Nier.</em>&quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024380671990435950 class=chatlog__message-container data-message-id=1024380671990435950><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024380671990435950>27-Sep-22 08:03 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>There is time to pause and think. Well, time. A moment. To shut off the inner voices -- quiet down the anxiety and screaming, the ever-looming feeling of having done something wrong. Though, still, he can stand up.
+
+Wonder for a moment. Why had it been so easy? 
+
+A white expanse -- a moment. His last memories were of pure and utter nothingness -- of giving it all. Of leaving. <em>Nothing left undone</em>. Nothing to <strong>regret</strong>.
+
+Of course -- &quot; I. &quot; -- That had been a lie he told himself, no? A way to ignore the fear. The pain. The regret. The darkness tugging at his heartstrings -- dragging him down, weighing him down like an anchor. Deeper. Drowning, choking.
+
+He&#39;d always known. <em>What</em> to do. <em>How</em> to act. Survival. No thoughts -- just actions. No time for sentimentality when things needed to get done. When he had to <em>protect the ones he loved</em>.
+
+&quot; I didn&#39;t. &quot; Of course, however, a stoic and well-composed facade is easy to crack once the weight of the world is lifted off of one&#39;s shoulders. Once it&#39;s all over -- <em>knowing</em>. Once, alone, at the end of a story left unwritten.
+
+&quot; I&#39;d rather die than know that the time we spent together ended up in nothing because I didn&#39;t-- I <em>wasn&#39;t able</em> to find a way out. I didn&#39;t want to hurt you. I didn&#39;t want you <em>dead</em>. &quot; So, the options had been clear -- and now, they were confusing. She was here, present. Weiss could&#39;ve had some advice - flowery language, perhaps, though... &quot; And I couldn&#39;t <em>make that choice</em>. I couldn&#39;t <em>choose</em> to live in a world without -- &quot; <s>Of course, even in such a moment of emotional tension, he manages to stop himself.</s> &quot; -- a world without <em>you</em>. &quot;
+
+Or not.
+
+&quot; I&#39;m sorry I didn&#39;t --- No, I... Right. There&#39;s no way of you forgiving me. &quot; He really messed up this time.
+
+&quot; I was a coward. &quot; Not good at lengthy conversation. &quot; ...I understand if you hate me now. &quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024386286385111141 class=chatlog__message-container data-message-id=1024386286385111141><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024386286385111141>27-Sep-22 08:25 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Her arm draped around herself in an attempt to fake comfort. In all her life, with all the abuse and pain, there was never one person able to cause so much hurt. The last time she felt like this was when she had to witness her grandmother die.
+
+She didn&#39;t want this again. She didn&#39;t want to be alone again. She didn&#39;t want to kill her love.
+
+Gloved hands wiped away her tears as she looked back up. &quot;Well I don&#39;t want to either, you fucking idiot!&quot;
+
+Both arms fall to her side with hands curled into fists. <em>Hate him? He thought she hated him?</em>
+
+&quot;You wants me to forgive you? Well then listen the hell up: Stop being a coward! Stop running away from me! Stop acting like you have to live without me, because you DON&#39;T.&quot;
+
+Tears stain her cheeks, but there&#39;s something in her eyes, emotions other than anger and sadness. A need. <em>A want.</em> The desire to be with him. 
+
+&quot;I don&#39;t know who the hell put us in this shit place of a fucked up mix-and-match playpen full of monsters and all that-- but that doesn&#39;t mean squat. Because we&#39;re <em>both</em> here.&quot; All the shakiness in her voice was gone, as if something washed it away. &quot;I sure as heck don&#39;t want to be alone again... And.... <em>god I hate being mushy</em> but... I don&#39;t want to be <em>without you</em>. As fucking cheesy as that sounds.&quot;
+
+Her gaze lowers once more, only slightly. &quot;I don&#39;t hate you, Nier. Just... don&#39;t abandon me. <em>Please.</em>&quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024398507831984139 class=chatlog__message-container data-message-id=1024398507831984139><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024398507831984139>27-Sep-22 09:13 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot; I... &quot;
+
+He doesn&#39;t speak, body moving on its own as if by pure impulse, he leans forward and - just wraps her in his arms. Stepping forward, of course. A hug -- one that had been due.
+
+Both a <em>farewell</em> left unsaid and the pure relief of meeting again after so long.
+
+He doesn&#39;t speak -- he doesn&#39;t.
+
+He needs time to process her words - to try and <em>understand</em>.
+
+Feeling as if she&#39;s not mad. Angry.
+
+...A momentary pause - he stops, he thinks. He is calm when he finds himself at a loss for words. Of course, he&#39;s processing all this - merely stopping to... <em>Chuckle</em>. Even if softly - something that no doubt&#39;ll get him his ass kicked later. &quot; ...That <em>is</em> cheesy. &quot;
+
+He&#39;s not letting go, though. Slightly larger frame, hugging her closely.
+
+&quot; I won&#39;t leave you again -- I&#39;m... Sorry. I thought by keeping my distance you&#39;d be <em>safer</em>, but... Ah. &quot; ...She has said his name. Despite it all - a part of him does remember. Something more. Leaning forward. &quot; ...I won&#39;t abandon you. I&#39;m sorry. &quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024425235119886356 class=chatlog__message-container data-message-id=1024425235119886356><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024425235119886356>27-Sep-22 11:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The moment his arms wrap around her, her heart feels like it stops for a moment. A much welcomed - perhaps even needed - embrace. 
+
+It doesn&#39;t take long for Kain&#233; to wrap her arms around him in return, almost clinging to him as if her life depended on it.
+
+Her face pressing against his chest as the last remnants of tears fall from her eyes.
+
+The smell of carnage on a bloodstain field surrounds then - arguably one of the least romantic things in the world, but it was... fitting. Covered in blood and other remains, holding each other? She wouldn&#39;t want it any other way...
+
+&quot;<em>Cram it...</em>&quot; she scoffs, tightening her hold. What a good thing she had buried her face against him so he could not see the blush creeping up her cheeks. <em>GOD that is so corny...</em>
+
+His words gave her comfort like nothing before. It was definitely a roller coaster ride from start to finish. It was probably most emotions she&#39;s felt, both in quantity and diversity, in a long time - possibly her whole life.
+
+&quot;Good... because if you do, I&#39;ll hunt you down and beat your ass, y&#39;here me? I&#39;m serious...&quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024715550749892608 class=chatlog__message-container data-message-id=1024715550749892608><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024715550749892608>28-Sep-22 06:13 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Not willing to let her go — he stays still, tightening the hug, leaning forward only to let his head rest atop hers. Perfect — an expression of peace.
+
+He doesn&#39;t respond for a while. Staying with her — looking off into the distance as he thinks. Quietly.
+
+&quot; Maybe it was... Good that we met again. Even if it&#39;s... <em>Here.</em> Even after... All that. I don&#39;t think I&#39;d have stayed otherwise... Ah. It may have been strange, keeping to the shadows to make sure you were okay. &quot;
+
+Yeah — foraging and always staying few steps away. Always nearby. Always ready to help — out of that need to protect.
+
+This did allow him to think — to ponder his decision. One he once was so determined to make. Stupid, somewhat. That&#39;s how it feels — but... This <em>need</em>.
+
+A <em>feeling</em>.
+
+Something he wouldn&#39;t want to lose.
+
+...But still, something he would give up if it kept Kain&#233; safe.
+
+Despite the fear of loss.
+Of loneliness.
+Of isolation.
+
+Of being undone.
+
+He&#39;s not letting go.
+
+&quot; <em>I missed you.</em> &quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024722515882414090 class=chatlog__message-container data-message-id=1024722515882414090><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024722515882414090>28-Sep-22 06:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Kain&#233; felt enveloped in warmth all around. A warmth that made her feel at ease, made her feel loved.
+
+After all, wasn&#39;t that all she ever wanted? To be loved and accepted despite of who she was or what she did? 
+
+For so long, she thought she didn&#39;t need it, thought she&#39;d never get that, as if that would be a luxury - <em>a stupid sappy dream</em> - to be loved.
+
+But she was right here. In his arms. <em>Finally.</em> Feeling like her icey heart and personality are all melting away.
+
+If it was up to her, she could stay like this forever, in silence, just being with him.
+
+His words made her hum in agreement. Maybe it was fate, she thought, <em>but she wouldn&#39;t say it.</em>
+
+&quot;You make this shitty place a whole lot less shitty... I don&#39;t really care where we are. As long as we&#39;re together- I will be your sword. I&#39;ll fight beside you.&quot;
+
+She strengthens her grip around him, almost as if squeezing him, pressing her face - her entire self closer against him as if she was trying to melt them both together, so she would never have to be without him. Kain&#233; didn&#39;t even realise she was doing that.
+
+&quot;I-&quot; the words are stuck in her throat. She shouldn&#39;t get ahead of herself. Shouldn&#39;t get carried away. They just reunited and her emotions were a powder keg about to explode. She had to stop herself from saying something extremely stupid. &quot;I missed you too.&quot;
+
+Yonah and the town crossed her mind briefly, wondering if he&#39;d like to know what happened in the past 3 years, but Kain&#233; was too selfish to bring it up. To selfish to risk breaking up this moment. <em>In due time... just let me have this for a little longer...</em> 
+
+She still wasn&#39;t fully convinced this was real. It&#39;s not the first time he appeared in her dreams, it surely won&#39;t be the last, and from what she heard, this world isn&#39;t short of being cruel to its inhabitants. 
+
+Kain&#233; would not let go. She would savour every second of this, for if she does wake up alone on a pile of leaves again, she can at least imagine the warmth. 
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">&lt;@2035033948647587</div></div></span></div></div></div></div><div id=chatlog__message-container-1024722518386413720 class=chatlog__message-container data-message-id=1024722518386413720><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="28-Sep-22 06:41 PM">18:41</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>84&gt;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1024722607783825478 class=chatlog__message-container data-message-id=1024722607783825478><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/199137718750412800/762afed6d4db5137da2982bb27263042.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(199,196,201) title=tincanbell#1212 data-user-id=199137718750412800>LUXU&#169;Y (15/20)</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1024722607783825478>28-Sep-22 06:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><s>bro fucking tupper are you for fucking real I will turn you into mashed potatoes</s> <span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1025079472799612959 class=chatlog__message-container data-message-id=1025079472799612959><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1025079472799612959>29-Sep-22 06:19 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Not letting go, maintaining a gaze of pure calm. He remains still, keeping her close until he&#39;s - well, until he considers he&#39;s overdone it, perhaps, though, he lingers in her arms for a moment as he pulls away. It&#39;s strange - yet familiar. <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">Corpses upon corpses of slain beasts, blood, guts and gore,</span> surrounded by the fruits of a battle long fought. He doesn&#39;t want the moment to end.
+
+He leans forward, pressing his forehead to hers. 
+
+&quot; I regret not making more memories with you, Kain&#233;. I regret a lot of things, now that I-- Well, now that I can see. And. Well... Yeah, this place may not be the best. And we may be in danger, but... If we&#39;re together, maybe we can make the most of our time here. The last time I saw you--... Ah. &quot;
+
+A sigh. 
+
+&quot; It doesn&#39;t matter now. We&#39;ve got time, right? I&#39;ll... Be right beside you. &quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1025086792778657932 class=chatlog__message-container data-message-id=1025086792778657932><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1025086792778657932>29-Sep-22 06:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Despite not wanting to, she knew the moment would have to come to an end, so they could both move forward - together.
+
+The reality and remains of their previous battle was still surrounding them, and it was starting to stink, she had to admit... 
+
+Still, it didn&#39;t matter for much longer as Nier came close once more, resting his forehead against hers. A moment so calm and tender she allowed herself to close her eyes and lean in to that moment, enjoying every second of it. 
+
+It almost felt forbidden. As if she wasn&#39;t allowed to be enjoying this. She remembered Tyrann&#39;s words... his threats that shall she become soft, he would take over -- but Tyrann was no more. There was nobody to prove her toughness and cold-heartedness and hatred to. There was only Nier, and she felt like she had already proven more important values to him. She too wished they could have made more and better memories, although she knew a moment like this would not have been possible back then. 
+
+A gloved hand rises to rest against Nier&#39;s cheek. A touch so gentle she wasn&#39;t fully convinced she was capable of such. Treating him as if he were a fragile lunar tear, as if he could break beneath her touch despite clinging to him with all her strength just moments before. <em>Love surely was a weird thing...</em>
+
+&quot;That&#39;s right. We&#39;ve got time. We can catch up on everything...&quot; An arrangement of sweetened words once again take hold of her vocal cords, shaking them once more for a quiet: <em>&quot;Let&#39;s make new memories.&quot;</em> So cheesy.......
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1026874895268851782 class=chatlog__message-container data-message-id=1026874895268851782><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1026874895268851782>04-Oct-22 05:14 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Even in an attempt to look tough. To provide some solid ground for her to stand on, he finds himself leaning into her touch, eyes closing. Breath slowing down to a calm exhale. 
+
+As if -- despite three years being but an instant to him, the end of his life, he <em>really missed her</em>. Leaning into that regret. That sudden weight of having given everything up. Of having given a life up, his own. Of giving up a sister. Of giving up his friends. 
+
+<em>Giving her up.</em>
+
+Something he&#39;d do again in a blink, but now? Now there were no stakes. No sword of Damocles should they step away from a pre-written path. No consequence for his indulgence. 
+
+There was no pressure -- no fight for another. No fight for himself. The only thing he&#39;s got -- the only thing he wants. In front of him.
+
+And as he thinks, as he remembers how <em>stupid</em> he&#39;d been. How powerless he had been, as he thinks about consequence. 
+
+It&#39;s <em>real</em>.
+
+&quot; You&#39;re softer than you look. &quot;
+
+A whisper. Rather than a teasing tone, an observation spoken in whispers. 
+<em>She&#39;s real</em>. And despite it, he hugs her tightly, as if letting go would make her disappear.
+
+...As if, one misstep, could lead to losing it all.
+
+The distance taken.
+
+<em>What a fool</em>.
+
+As he pulls away -- only a while after, he&#39;ll try to play it cool, standing upright and moving away, staring off to the side.
+
+Inhale. Exhale.
+
+&quot; ...We should... Probably move, &#191;No...? Before we... Attract any more beasts, I mean. &quot;
+
+He looks happy enough. Relieved. At peace.
+
+He&#39;s peaceful.
+...And still, he seems flustered.
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1027620512869908571 class=chatlog__message-container data-message-id=1027620512869908571><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1027620512869908571>06-Oct-22 06:37 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Maybe they had to go through all this. Maybe being petrified for 5 years was meant to be. Maybe spending the past 3 years looking after Yonah and fighting shades was just how it was supposed to be, readjusting to the company of people, of friends...
+
+Maybe they had to go through all of this to be reunited in a strange new world. One not short of monsters it seems anyway. Even if they were to settle down, they&#39;d not get bored.
+
+<em>Settling down...</em> Something she never thought about before. Never thought possible... But now?
+
+As his whispers would slither into her ears, Kain&#233; mumbled a <em>slightly flusterted</em> &quot;Shut up...&quot; Despite it all, she still got an image to maintain.
+
+The warmth that leaves her as Nier pulls away hits her with a chill that brings her back to reality. Still, her eyes are fixed on him for a while.
+
+&quot;Right... Right... This place is littered with those shitty creatures. I&#39;ve moved camp twice and they always showed up... Isn&#39;t there place free from-&quot; The City maybe. Not that she&#39;d voluntarily move in there. She&#39;d sooner move Camp 10 times and fight monsters off than consider living in a <em>city</em> with <em>people</em>. Ew.
+
+Kain&#233;&#39;s gaze scans the area around them. Still as bloody as five minutes ago. Expected. As she spots the sword she had stuck in the ground earlier, before confronting Nier, she wonders how she was able to put it down in the first place.
+
+&quot;Just lead the way.&quot; She walks over to the sword, pulling out of the ground as she spoke. &quot;I&#39;ll follow.&quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1028061334581022811 class=chatlog__message-container data-message-id=1028061334581022811><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1028061334581022811>07-Oct-22 11:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot; ...Well. We could stay together. Doubt they&#39;d mess with us if we set up a camp... Or, well... &quot;
+
+Yeah. <em>The city.</em>
+Nier&#39;s been mostly nomadic these past few days. And still, the City seems like a good enough option. He exhales.
+
+&quot; You&#39;ll follow? Even if that means being stuck with me... Well, I&#39;m honoured. &quot;
+
+A couple steps are taken, beginning to move away.
+Not toward the city. To find somewhere to stay near it. 
+
+But, he stops his march. This could be like back then. Just travelling from one place to another without a care in the world.
+
+...But, maybe, he doesn&#39;t want it to be <em>exactly</em> like back then. As he pauses, a hand is offered. 
+
+&quot; ...Let&#39;s go, okay? &quot;
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1028068845354745896 class=chatlog__message-container data-message-id=1028068845354745896><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1028068845354745896>08-Oct-22 12:18 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>We could stay together.</em> Something about the sentence stings. Just like when he offered to camp out with Emil and her because they weren&#39;t welcome inside his town. Could she really be so selfish to make him stay with her when there way a city he could live in? 
+
+The thought soon dismissed as she scoffs at this comment. A gloved hand rests on her hip, gaze once more fixed on him as she resisted to roll her eyes. &quot;You&#39;re honoured? Don&#39;t pretend I didn&#39;t just pour my fucking heart out in front of you, jeez.&quot; To an extend she was capable of at least. 
+
+Still... she knew there was a lot to talk about they haven&#39;t gotten to yet. Of course things wouldn&#39;t just get rosy and lovey-dovey in an instant like this.
+
+As he walks on, Kain&#233; follows, as she always has and always will, catching up to him as he suddenly stops. 
+
+Sarcastic remarks die in an instant on her tongue before she even got to say a single word -- he... offered her his hand to hold? Really? It made her hesitate a little. Could she really just... take it? Hold his hand without a care in the world? Walk <em>beside</em> him instead of following along? A touch of affection that she&#39;s been so deprived of - offered to her on a silver platter - was she really ok to just... take it?
+
+Would it make her soft? What if other people saw them together? Would he like her less if she got soft? The thoughts kept piling in her head but for once they weren&#39;t Tyrann or Dimo or any of the other citizen of The Aerie. No, these thoughts were hers alone. 
+
+<em>Quit bitching. Just hold his hand, girl.</em> Kain&#233; exhales a breath she wasn&#39;t even aware she was holding on to. Fingers curled nervously once, twice, like a heartbeat before finally intertwining with Nier&#39;s. <em>Thanks, Grandma...</em>
+
+&quot;Right... let&#39;s go.&quot; 
+
+<div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1029779652996243518 class=chatlog__message-container data-message-id=1029779652996243518><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1029779652996243518>12-Oct-22 05:36 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot; Poured your heart out...! It&#39;s cute, I&#39;d say. Seeing you like this. &quot;
+
+Still, he takes her hand, casting aside doubts. Not bothering to ask questions that would only sink him deeper into thoughts of a past abandoned -- they&#39;d have time. This time, without the world ending at their feet, without shades, without... Well. Never without a fight.
+
+But that&#39;s just how he liked it. Despite the calm aura emanating from the pair, tension and all, beasts and demons would most likely think twice before jumping them.
+
+Kain&#233;. The <em>real</em> Kain&#233;. 
+
+Looking conflicted, despite Nier not being the best judge of character, he could somewhat sense her feelings. How she wasn&#39;t used to it.
+
+His eyes did wander to her arm, now lacking a certain bandaging...
+
+No, he doesn&#39;t <em>regret</em> anything.
+
+He firmly grasps her hand. Denoting calm. Composed behaviour.
+
+&quot; Even if we&#39;re not going to stay there, we should probably start by stopping by the city. Get some supplies before... Camping out! Or, well. We could... Find somewhere to stay. &quot; Clearing his throat. &quot; Together. I mean. &quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1029779680775131178 class=chatlog__message-container data-message-id=1029779680775131178><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/203503394864758784/8770e67cf6588e30f77c20c6897c3e37.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,105,180) title=LIARLIAR#7436 data-user-id=203503394864758784>bapho</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1029779680775131178>12-Oct-22 05:36 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"> <span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1030005037478445107 class=chatlog__message-container data-message-id=1030005037478445107><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1030005037478445107>13-Oct-22 08:32 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>Cute</em>... Not exactly what she&#39;d describe herself as. Nobody ever has. Emil and Yonah, they were cute, yes, adorable even, but <em>her</em>? Kain&#233; had a tough time wrapping her head around that concept... Though he did not seem to mind.
+
+As he grasps her hand firmly, Kain&#233; gives a squeeze in return. Perhaps the corners of her mouth even lifted ever so slightly, and perhaps even her brows stopped furrowing into her signature scowl. One could say she even looked calm.
+
+At least until the mention of the city.
+
+&quot;Supplies... Right.&quot; Gazing to the side, she didn&#39;t want to sour the moment with the look of scorn on her face. So many emotions in sich little time. Was everyone like that?
+
+&quot;The weather&#39;s only gonna get colder from now on, isn&#39;t it?&quot; A setting sun, changing seasons, things she&#39;s only heard about in stories. Camping out has already showed her how cold the nights in this new world would be... Would they be able to survive it? &quot;We should see what supplies we will be able to get our hands on...&quot;
+
+The City was still a distance away, but the thought of entering it still gave her a bad feeling. &quot;I&#39;ll wait outside. You can go ahead once we&#39;re there.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1030005054436024351 class=chatlog__message-container data-message-id=1030005054436024351><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/199137718750412800/762afed6d4db5137da2982bb27263042.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(199,196,201) title=tincanbell#1212 data-user-id=199137718750412800>LUXU&#169;Y (15/20)</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1030005054436024351>13-Oct-22 08:32 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1030500926223548496 class=chatlog__message-container data-message-id=1030500926223548496><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/90290a1a1a3fb735119d7aece2ad09c1.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=NIER.#0000 data-user-id=913627519410925598>NIER.</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1030500926223548496>14-Oct-22 05:22 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot; Wait outside? &quot;
+
+He shook his head, despite maintaining his pace towards the buildings. <em>Not this time</em>. 
+
+&quot; I think... Even if we&#39;re not staying there. I think it&#39;s okay for us both to go there, right? There&#39;s nothing keeping you from doing it and... Well. If they give you any trouble, they&#39;ll have to go through me. &quot;
+
+That said, he did look on to the sun, tightening his grasp on her hand, moving back to the city. A walk, mostly peaceful, yes.
+
+&quot; ...If the weather&#39;s getting cold, we&#39;ll make do. Get some blankets. Or... Something. We can stop by and see how the people have been faring so far, or just stay on the edge. &quot;
+
+Still a ways ahead, but. He wouldn&#39;t have her feel alone. Not anymore. He didn&#39;t want to see Kain&#233; isolate herself anymore. 
+
+And that, despite the innocence of it all, was one of those promises he would make himself. Stubborn as he was.
+
+&quot; ...I don&#39;t want you to be alone anymore, I guess, is what I&#39;m trying to say. &quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1030500953138397316 class=chatlog__message-container data-message-id=1030500953138397316><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/203503394864758784/8770e67cf6588e30f77c20c6897c3e37.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,105,180) title=LIARLIAR#7436 data-user-id=203503394864758784>bapho</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1030500953138397316>14-Oct-22 05:22 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="tincanbell#1212">@LUXU&#169;Y (15/20)</span></div></div></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1030512986483339325 class=chatlog__message-container data-message-id=1030512986483339325><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/913627519410925598/675b7b3dd5c5943ca1082999e1fac78d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=Kainé#0000 data-user-id=913627519410925598>Kain&#233;</span> <span class=chatlog__bot-label>BOT</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1030512986483339325>14-Oct-22 06:10 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>His optimism was equal parts painful and a delight. If everyone could be as kind and accepting as him, of course nothing would stop her from going to the city... but that&#39;s not how life works. It never worked like that. 
+
+Kain&#233; did not want to stop him in his tracks, but she slowed her own pace slight, assuming her position a behind him while still close enough to hold his hand. 
+
+&quot;It&#39;s not... that easy. Never been welcome anywhere, never will be. &#39;s just how it is. We might be in a different place but, people don&#39;t change... I don&#39;t care if they give <em>me</em> any trouble. I&#39;m used to that. I&#39;m more concerned of them giving <em>you</em> trouble if you&#39;re seen with me.&quot;
+
+It&#39;s not like she liked any of this herself, but life&#39;s not a picnic, you don&#39;t make a wish and it comes true just because you want to. Of course she wants people to accept her... to respect her. Of course she wants to have friends, wants to be with Nier, and just be <em>normal</em>, but she wasn&#39;t <em>normal.</em> Normal was a luxury she was denied so many times she can&#39;t even remember them all.
+
+&quot;I don&#39;t mind waiting outside. Always have, y&#39;know that by now. Besides, you won&#39;t take too long anyway, right? You&#39;re not gonna run off on me again, so I&#39;ll just wait outside.&quot;
+<img loading="lazy" class="chatlog__emoji " alt="inivis" title="inivis" src="https://cdn.discordapp.com/emojis/1024055691318661210.png"></span></div></div></div></div><div id=chatlog__message-container-1030512989352231052 class=chatlog__message-container data-message-id=1030512989352231052><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="14-Oct-22 06:10 PM">18:10</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Despite it all, Kian&#233; wondered where exactly they were - not their location - but where the two of them were standing. Would she slowly poison herself with every touch, every second they continued holding hands. Was she too officious? To clingy? Not enough? Would he hold her again like he did just earlier? Would it break her, make her act carelessly? Would a <em>kiss</em> help her get the tension out of her system, or would she end up overindulging, taking a killing-dose of the love she&#39;s been craving? 
+
+Kain&#233; needed time to think by herself... oh how she wished she could talk to her Grandmother right now, or Yonah, or Emil. To sort her thoughts, to tell wrong from right and dream from reality.
+
+A heavy sigh falls from her lips as her pace picks up again, to walk beside him. &quot;It&#39;s alright. Don&#39;t worry about me. As long as you come back and meet me at the gate, I won&#39;t be alone.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1030513023384813628 class=chatlog__message-container data-message-id=1030513023384813628><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/199137718750412800/762afed6d4db5137da2982bb27263042.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(199,196,201) title=tincanbell#1212 data-user-id=199137718750412800>LUXU&#169;Y (15/20)</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1030513023384813628>14-Oct-22 06:10 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content"><span class="chatlog__markdown-mention" title="LIARLIAR#7436">@bapho</span></div></div></span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 32 message(s)</div></div>

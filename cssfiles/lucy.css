@@ -479,7 +479,7 @@ pre {
 
 .next_page {
     position:fixed;
-    bottom:111px;
+    bottom:187px;
     right:32px;
     text-align:center!important;
     display:inline-block;
@@ -511,7 +511,7 @@ pre {
 
 .prev_page {
     position:fixed;
-    bottom:111px;
+    bottom:187px;
     right:415px;
     text-align:center!important;
     display:inline-block;

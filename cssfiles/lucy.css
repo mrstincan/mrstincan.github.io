@@ -8,7 +8,7 @@
     --fontsmall:10px; /* smaller fontsize for smaller things */
     
     
-    --background: url('https://abload.de/img/bgtiarkkov.png');
+    --background: url('https://i.imgur.com/Ix0iYch.png');
     --divider:  url('https://abload.de/img/bgtiadivmfjrc.png');
     
     --padding:10px;
@@ -28,13 +28,13 @@
         you can put any HEX, RGB/RGBA color code here!  */
 
     --text: #fff;        /* text colour */
-    --bold: #d27f96;        /* bold text colour */
-    --italics: #86b486;     /* italics text colour */
-    --link: #a1bec3;           /* link colours */
-    --hover: #d3466d;       /* links on hover colour */
+    --bold: #d65660;        /* bold text colour */
+    --italics: #d5aab6;     /* italics text colour */
+    --link: #8CB3BE;           /* link colours */
+    --hover: #485d78;       /* links on hover colour */
     --border:#1f1f21;   /* color of all borders, including blockquote */
     --shadow:rgba(5,0,0,0.4);   /* colour of text and box-shadows */
-    --museinfo1:#86a8ae;   /*   Kind of like an accent colour */
+    --museinfo1:#86babe;   /*   Kind of like an accent colour */
     
     
     /* Customize how your tooltip looks like! (when you hover over link)*/
@@ -258,7 +258,7 @@ pre {
     bottom:50px;
     right:60px;
     width:330px;
-    height:120px;
+    height:320px;
     padding:10px;
     font-size:var(--fontsize);
     text-align:center;
@@ -479,7 +479,7 @@ pre {
 
 .next_page {
     position:fixed;
-    bottom:111px;
+    bottom:187px;
     right:32px;
     text-align:center!important;
     display:inline-block;
@@ -511,7 +511,7 @@ pre {
 
 .prev_page {
     position:fixed;
-    bottom:111px;
+    bottom:187px;
     right:415px;
     text-align:center!important;
     display:inline-block;

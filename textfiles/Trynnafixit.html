@@ -1,0 +1,1094 @@
+
+<html>
+    <head>
+
+<link href="https://mrstincan.github.io/cssfiles/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+<link href="https://mrstincan.github.io/cssfiles/misc.css" rel="stylesheet" type="text/css" />
+<link href="https://mrstincan.github.io/cssfiles/virusmulti.css" rel="stylesheet" type="text/css" />
+
+                                <!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+
+<script>
+    //############# Setup stuff ###############
+
+const SCROLL_PLANE_CLASS = "scrollPlane";
+const INITAL_CONTAINER = 0;
+const TRANSITION_TIME = 0.5;
+const TRANSITION_TIMING_FUNCTION = "ease";
+
+const buttons = [  
+    document.getElementById("but1"),
+    document.getElementById("but2"),
+    document.getElementById("but3")
+];
+
+//############# Create transitions ###############
+
+let transitionsStyleTag = document.createElement("style");
+for(let i = 0;i < buttons.length;i++) {
+    transitionsStyleTag.innerHTML += "." + SCROLL_PLANE_CLASS + ".c" + i + " { top: -" + (i * 100) + "%; transition: " + TRANSITION_TIME + "s; transition-timing-function: " + TRANSITION_TIMING_FUNCTION + "; }";
+}
+document.getElementsByTagName("head")[0].appendChild(transitionsStyleTag);
+
+//############# Event handling ###############
+
+let scrollPlane = document.getElementsByClassName(SCROLL_PLANE_CLASS)[0];
+scrollPlane.classList.add("c" + INITAL_CONTAINER);
+
+function buttonCallback(event) {
+    for(let i = 0;i < buttons.length;i++) {
+        for(let j = 0;j < event.path.length;j++) {
+            if(event.path[j] == buttons[i]) {
+                for(let k = 0;k < buttons.length;k++) {
+                    if(i == k) {
+                        scrollPlane.classList.add("c" + k);
+                    } else {
+                        scrollPlane.classList.remove("c" + k);
+                    }
+                }
+                break;
+            }
+        }
+    }
+}
+
+for(let i = 0;i < buttons.length;i++) {
+    buttons[i].onclick = buttonCallback;
+}
+    
+</script>
+
+
+<title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+
+    </head>
+
+
+<style type="text/css">
+
+        /* Working with variables! 
+        This section allows you to customize most of your theme
+        without having to go back and forth! 
+        */
+        
+:root {
+    --fontsize:12px; /* Font Size for most if not all universally readable bodys/posts/containers etc*/
+    --fontsmall:10px; /* smaller fontsize for smaller things */
+    
+    --background: url('https://images.unsplash.com/photo-1560147000-ae4cab65f12b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    --divider:  url('https://images.unsplash.com/photo-1560147000-ae4cab65f12b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    
+    --padding:14px;
+    --pad2:calc(var(--padding) * 2);
+    
+    --width:calc(1212px - var(--pad2));  
+    --sides:300px;
+    --height:700px; 
+    
+    --posv:35px; /* the VERTICAL position /top-bottom/ of your container*/
+    --posh:35px; /* the HORIZONTAL position /left-right/ of your container*/
+    
+    
+    /*  Customize the colors of your theme! 
+    you can put any HEX, RGB/RGBA color code here!  */
+
+    --bgcolor: rgba(255,250,250,1); /*  background colour */
+    --text: rgba(214, 152, 180,1);        /* text colour */
+    --bold: rgba(173, 48, 104,1);        /* bold text colour */
+    --italics: rgba(173, 48, 104,1);     /* italics text colour */
+    --link: rgba(156, 33, 68,1);           /* link colours */
+    --hover: rgba(34,57,92,1);       /* links on hover colour */
+    
+    --border:rgba(214, 152, 180,1);   /* color of all bordrs */
+    
+    --museinfo:rgba(214, 152, 180,1);
+    --shadow:rgba(133, 82, 97,1);   /* colour of text and box-shadows */
+    
+    
+    /* Customize how your tooltip looks like! (when you hover over link)*/
+    --font:'Merienda One', cursive;        /*  The font you use    */
+    --fontsz:25px;              /*  The fontsize    */
+    --tooltip:#fff;     /*  the colour of the text  */
+    --toolborder:rgba(163, 82, 105,1); /*  the outline/border color*/ 
+}
+
+
+</style>
+
+<body>
+
+<nav>
+    <button id="but1"> <i class="fas fa-home" title="home" style="color:var(--text)"></i> </button>
+    
+    <button id="but2"> <i class="far fa-comment" title="rules + ask" style="color:var(--text)"></i> </button>
+    <button id="but3"> <i class="fas fa-bars" title="muses" style="color:var(--text)"></i> </button>
+</nav>
+
+<div id="kudos">
+            <a href="#?w=1000" rel="credit" class="poplight" title="credits"><i class="fas fa-heart" style="color:var(--text)"></i></a>
+        </div>  
+
+<main>
+    <div class="scrollPlane">
+        <div class="container1">  <!-- INDEX -->
+            <div id="cont">    <!-- Just classic tumblr stuff -->
+                    <div class="heads">    <!-- SIDEBAR !! Edit below to fill out your sidebar-->
+                    <hr>
+                <b>Lorem ipsum dolor sit amet</b>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+                
+                <h4>Short Quote</h4>
+                
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                
+                <hr>
+                    
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+                    
+                <h4>Short Quote 2</h4>
+                    
+                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+
+        
+                    </div>
+        
+            
+            <div class="shoulders">
+                <img src="https://via.placeholder.com/300x150" />
+            </div>
+            
+            <div class="knees">
+            
+            <a href="/"><h2 style="margin-top:0px; font-size:24px;">{Title}</h2></a>
+            
+            <hr>
+            
+                Put some text here! like IND | <b>Multi Muse</b> | fandom XYZ | <i>mutuals only</i>
+                <pre>more description!</pre>
+                <h4>I do not bite,</h4>
+                <i>multiverse & multiship</i> <br>
+                <b>verses for:</b> Fandom 01 | Fandom 02 | etc  <br>
+                headcanon/AU based
+            
+                <h4 style="font-size:26px">I merely collect.</h4>
+                     Drafts: 0
+                <br> Asks: 0
+                <h3>by [your name here]</h3>
+            </div>
+            
+<div class="toes"><!-- PAGINATION -->
+{block:Pagination}<h2>{block:PreviousPage}<a href="{PreviousPage}" title="previous page">↞</a>{/block:PreviousPage} {CurrentPage} of {TotalPages} {block:NextPage}<a href="{NextPage}" title="next page">↠</a>{/block:NextPage}</h2>{/block:Pagination}</div>
+            
+        <div class="postbox">{block:Posts}<div class="posts">   
+        {block:Text}{block:Title}<div class="tobe">{Title}</div>{/block:Title}        {Body}        
+        {block:More}
+        <div class="more-btn-wrap">
+            <a href="{Permalink}" class="more-btn">
+                continue reading...
+            </a>
+        </div>
+        {/block:More}
+        {/block:Text}
+        
+        {block:Photo}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+        {block:Caption}{Caption}
+        {block:More}
+        <div class="more-btn-wrap">
+            <a href="{Permalink}" class="more-btn">
+                continue reading...
+            </a>
+        </div>
+        {/block:More}
+        {/block:Caption}{/block:Photo}
+        
+        {block:Panorama}{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>{LinkCloseTag}{block:Caption}{Caption}
+        {block:More}
+        <div class="more-btn-wrap">
+            <a href="{Permalink}" class="more-btn">
+                continue reading...
+            </a>
+        </div>
+        {/block:More}
+        {/block:Caption}{/block:Panorama}
+        
+        {block:Photoset}{Photoset}{block:Caption}{Caption}
+        {block:More}
+        <div class="more-btn-wrap">
+            <a href="{Permalink}" class="more-btn">
+                continue reading...
+            </a>
+        </div>
+        {/block:More}
+        {/block:Caption}{/block:Photoset}
+        
+        {block:Answer}
+        
+        <div class="fus"><img src="{AskerPortraitURL-64}" />
+        <br>{Asker} asked:</div>
+        <div class="ro">{Question}</b></div>
+        <hr>
+        <div class="dah">{Answer}</div>
+        {block:More}
+        <div class="more-btn-wrap">
+            <a href="{Permalink}" class="more-btn">
+                continue reading...
+            </a>
+        </div>
+        {/block:More}
+        {/block:Answer}
+        
+        
+        {block:Quote}<div class="tobe">"{Quote}"</div>{block:Source}
+        
+        <div class="ornottobe">{Source}</div>{/block:Source}{/block:Quote}
+        
+        {block:Link}<h4><a href="{URL}" class="link" {Target}>{Name}</a></h4>{block:Description}{Description}
+        {block:More}
+        <div class="more-btn-wrap">
+            <a href="{Permalink}" class="more-btn">
+                continue reading...
+            </a>
+        </div>
+        {/block:More}
+        {/block:Description}{/block:Link}
+        
+        {block:Chat}{block:Title}<div class="tobe">{Title}</div>{/block:Title}
+        {block:Lines}{block:Label}<div class="lable">{Label}</div>{/block:Label} {Line}<br>{/block:Lines}{/block:Chat}
+                                
+        {block:Video}{Video-500}{block:Caption}{Caption}
+        {block:More}
+        <div class="more-btn-wrap">
+            <a href="{Permalink}" class="more-btn">
+                continue reading...
+            </a>
+        </div>
+        {/block:More}
+        {/block:Caption}{/block:Video}
+        
+        {block:Audio}
+        {block:AudioPlayer}
+        <div class="beatbox">
+                <table>
+                <tr><th>{block:TrackName}❝{TrackName}❞{/block:TrackName}<br>
+                        {block:Artist}{Artist}{/block:Artist}
+                </th>      
+                    {block:AlbumArt}<td style="background-image:url('{AlbumArtURL}');">        <div class="beat">{AudioPlayer}</div>
+                    </td>{/block:AlbumArt}
+                    <th>♪ <b title="listened to {PlayCount} times">{PlayCount}</b> ♫
+                    </th>
+                </tr>
+            </table>
+        </div>
+        
+        {block:Caption}{Caption}
+        {block:More}
+        <div class="more-btn-wrap">
+            <a href="{Permalink}" class="more-btn">
+                continue reading...
+            </a>
+        </div>
+        {/block:More}
+        {/block:Caption}{/block:AudioPlayer}{/block:Audio}
+        
+            <div class="permalinks">
+                <div class="stats"><a href="{ReblogParentURL}" title="via {ReblogParentName}">◈</a> 
+                <a href="{ReblogRootURL}" title="source {ReblogRootName}">❖</a> 
+                <a href="{Permalink}" title="{NoteCountWithLabel}">
+                ♯</a>
+                <a href="{ReblogURL}" title="reblog">↻</a>
+                </div>
+                
+                <div class="display">
+                <a href="{Permalink}" title="{TimeAgo}">{DayOfMonthWithZero}{DayOfMonthSuffix} {ShortMonth} {Year} </a>
+                </div>
+            
+            
+                <div class="tags">
+                {BLOCK:HASTAGS}☆&emsp; {BLOCK:TAGS}<A HREF="{TAGURL}"> {TAG} </A> &emsp;☆&emsp;{/BLOCK:TAGS}{/BLOCK:HASTAGS}</div>
+                
+            </div>
+        
+            
+        </div><!-- POSTS -->
+        
+            {block:PermalinkPage}
+                <div class="whathappened">
+                    {block:PostNotes} {PostNotes} {/block:PostNotes}
+                </div>
+            {/block:PermalinkPage}
+        
+        {/block:Posts}
+            </div>
+            </div><!-- CONTAINER --><!-- DO NOT TOUCH -->
+            
+        </div> <!-- CONTAINER END -->
+        
+        
+        <div class="container2">  <!-- RULES + ASKBOX -->
+            <div id="cont">
+            
+            <div class="guidebox">
+                <h1>Guidelines</h1>
+                
+                My name is Rats
+                <p>
+                I’m 24
+                <p>
+                He/Him pronouns. 
+                <p>
+                I’m kind of finicky and shy. I tend to be sort of quiet and backgrounded for long periods of time. 
+                <p>
+                I do have discord, upon request if I trust you, 
+                <p>
+                I only have a few rules, and ask only you use common sense and common courtesy.
+
+                <h2>Rules:</h2>
+
+                - Don’t push me for replies. I’m in a rough spot right now, and I rp for fun. While I do adore you, and I do enjoy our time, my energy is finicky and sometimes I can’t focus much more than to yell about headcanons or engage in low energy one on ones in discord.
+                <p>
+                - I AM open to ships, but I also prefer things be built up a bit or at the very least plotted out.
+                <p>
+                - Most of my muses are minors. I won’t be writing raunchy stuff with them. I may not even do nsfw with my adult muses in detail. (Drawings… Maybe)
+                <p>
+                -I am white. If I do/say/draw something racist, please gently let me know and I will correct it. I’m not perfect, and I won’t ever claim to be. Sometimes I will make mistakes because I am, at times, ignorant because I haven’t encountered certain things or didn’t, wholeheartedly, realize that it was hurtful. 
+                <p>
+                -Transphobic/homophobic/maliciously racist actions and words OOC will be met with blocking. Not only is it distasteful and hurtful, but I also don’t have the energy to deal with it. 
+                <p>
+                -MAPs/Pedophiles/Pro-contact/Anti-contact/kindergender/whatever will be blocked with no warning. I do not support people who are sexually or romantically attracted to children.
+                
+                <!-- for credits you can look up 'CREDIT POP UP' and put all the credits for icons, psds, artwork etc there -->
+            
+            </div>
+            <div class="navibox">
+                
+                <h4>Navigation</h4>
+                <div class="navigator">
+                    <a href="/tagged/TAG">TAG</a>
+                    <a href="/tagged/TAG">TAG</a>
+                    <a href="/tagged/TAG">TAG</a>
+                    <a href="/tagged/TAG">TAG</a>
+                    <a href="/tagged/TAG">TAG</a>
+                    <a href="/tagged/TAG">TAG</a>
+                    <a href="/tagged/TAG">TAG</a>
+                </div>
+            
+            </div>
+            <div class="inbox">
+    <h1>{AskLabel}</h1>
+    <hr>
+    <p>Please read the rules before interacting! Anon is turned on for the shy people, not for hate. Anon hate is not tolerated.</p>
+    <p>
+    <iframe frameborder="0" id="ask_form" scrolling="yes" src="https://www.tumblr.com/ask_form/{Name}.tumblr.com" width="100%"></iframe></p>
+    
+    
+    <hr>
+    <h1>{SubmitLabel}</h1>
+    
+    <p>
+    <iframe frameborder="0" height="100%" id="submit_form" scrolling="yes" src="https://www.tumblr.com/submit_form/{Name}.tumblr.com" width="100%"></iframe></p></div>
+        
+        </div>
+        </div> <!-- CONTAINER END -->
+        
+
+        <div class="container3">  <!-- MUSES -->
+<div class="musebox"><hit id="tabs">
+    
+                                    <!-- BNHA -->
+    
+        <click class="active">
+            <div class="box"> <!-- Hiro -->
+                <img src="https://64.media.tumblr.com/080ec1c4a6ca04d7cd66f4831a787612/tumblr_inline_qnzodh29TM1ujw98a_500.png"/>
+            </div>
+        </click>
+        
+        <click>
+            <div class="box"> <!-- Val -->
+                <img src="https://64.media.tumblr.com/b36e7a55a5281c1118892268ef5a50a8/tumblr_inline_qnzodjzovv1ujw98a_500.png"/>
+            </div>
+        </click>
+   
+        <click>
+            <div class="box"> <!-- Kimi -->
+                <img src="https://64.media.tumblr.com/64a28d207630b7a832fe25bdf0ceaeaa/tumblr_inline_qnzodlVOFU1ujw98a_500.png"/>
+            </div>
+        </click>
+
+
+</hit></div>
+            
+<hit id="tab"><click class="active">
+<div class="biobox1">
+    <div class="about-box">
+        <h4>About</h4>
+        
+        <table>
+        <!-- Fill in the basics of your muse here. Feel free to remove or edit to your hearts content! -->
+        
+        <tr><th>Name:</th>      
+            <td>    Hiro </td></tr>
+
+        <tr><th>Birthday:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Gender:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Quirk:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Affiliation:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Preference:</th>      
+            <td>    INSERT HERE </td></tr>
+    </table>
+    
+    <hr>
+    <h2 style="text-transform:lowercase;">❝ QUOTE ❞</h2>
+    
+    <div class="dropdown">
+        <p class="drop_title">  Appearance  ✧</p>
+            <div class="drop_body">
+            <!--insert images   →     <img src="IMG URL"/>    -->
+            
+            Cute as a button.
+
+        </p></div><br>
+        
+        <p class="drop_title">✧  Personality   </p>
+            <div class="drop_body">
+            
+            Whatever you want to be!
+            
+        </p></div><br>
+    </div>
+    
+        </div>
+</div>
+
+<div class="biobox2">
+        <h4>Backstory</h4>
+        <div class="about-box"><p>
+        
+        Backstory here! ♡
+        
+        </p></div>
+    
+</div>
+
+<div class="biobox3">
+         <hit id="tab">
+            <div id="bbox"><bio id="toggles">
+            <!-- This is the navigation within your about page. Feel free to replace the symbols with text or other symbols.      -->
+              <swoop class="active" title="Verses">◑</swoop>
+              <swoop title="Bonds">⬤</swoop>
+              <swoop title="Links">◐</swoop>
+            </bio></div>
+    
+<bio id="toggle">      
+    <swoop class="active">      <!-- ABOUT / Verses -->
+        <h4>Verses</h4>
+        <div class="about-box">
+        
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                Insert about for your verse here
+       
+        </p>
+            </ver>
+            
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                Insert about for your verse here
+       
+        </p>
+            </ver>
+            
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                Insert about for your verse here
+       
+        </p>
+            </ver>
+        
+        </div>  <!-- To put in more verses, look for "BASE CODES" below and copy the code from the verses section and paste it above the </div>-->
+    </swoop>
+    
+    <swoop>     <!-- ABOUT / RELATIONSHIPS -->
+        <h4>Bonds</h4>
+        <div class="about-box">
+       
+           <rel>
+            <a class="rel1" href="https://URL.tumblr.com" title="URL">✩</a>
+            <a class="rel2" href="/tagged/SHIPTAG" title="bond tag">♡</a>
+            <img src="https://via.placeholder.com/75"/>
+           
+            <h2>Name</h2>
+            <p><b>Position:</b>
+            <br>    Main/AU/ALT/EXCLUSIVE/WISHLIST  </p>
+            <pre>
+                Put a small about here. Or long. Go wild. I won't judge.
+            </pre>
+        </rel>
+        
+        <rel>
+            <a class="rel1" href="https://URL.tumblr.com" title="URL">✩</a>
+            <a class="rel2" href="/tagged/SHIPTAG" title="bond tag">♡</a>
+            <img src="https://via.placeholder.com/75"/>
+           
+            <h2>Name</h2>
+            <p><b>Position:</b>
+            <br>    Main/AU/ALT/EXCLUSIVE/WISHLIST  </p>
+            <pre>
+                Put a small about here. Or long. Go wild. I won't judge.
+            </pre>
+        </rel>
+        
+        </div> <!-- To put in more relationships, look for "BASE CODES" below and copy the code from the Relationships section and paste it above the </div>-->
+    </swoop>
+    
+    <swoop> <!-- ABOUT / NAVIGATION -->
+        
+        <h4>Navigation</h4>
+        <div class="navigator">
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+        </div>
+        
+    </swoop>
+</div>
+</bio></click>
+
+<click><div class="biobox1">
+    <div class="about-box">
+        <h4>About</h4>
+        
+        <table>
+        <!-- Fill in the basics of your muse here. Feel free to remove or edit to your hearts content! -->
+        
+        <tr><th>Name:</th>      
+            <td>    Val </td></tr>
+
+        <tr><th>Birthday:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Gender:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Quirk:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Affiliation:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Preference:</th>      
+            <td>    INSERT HERE </td></tr>
+    </table>
+    
+    <hr>
+    <h2 style="text-transform:lowercase;">❝ QUOTE ❞</h2>
+    
+    <div class="dropdown">
+        <p class="drop_title">  Appearance  ✧</p>
+            <div class="drop_body">
+            <!--insert images   →     <img src="IMG URL"/>    -->
+            
+            Cute as a button.
+
+        </p></div><br>
+        
+        <p class="drop_title">✧  Personality   </p>
+            <div class="drop_body">
+            
+            Whatever you want to be!
+            
+        </p></div><br>
+    </div>
+    
+        </div>
+</div>
+
+<div class="biobox2">
+        <h4>Backstory</h4>
+        <div class="about-box"><p>
+        
+        Val Backstory here! ♡
+        
+        </p></div>
+    
+</div>
+
+<div class="biobox3">
+         <hit id="tab">
+            <div id="bbox"><bio id="toggles">
+            <!-- This is the navigation within your about page. Feel free to replace the symbols with text or other symbols.      -->
+              <swoop class="active" title="Verses">◑</swoop>
+              <swoop title="Bonds">⬤</swoop>
+              <swoop title="Links">◐</swoop>
+            </bio></div>
+    
+<bio id="toggle">      
+    <swoop class="active">      <!-- ABOUT / Verses -->
+        <h4>Verses</h4>
+        <div class="about-box">
+        
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                VAL Insert about for your verse here
+       
+        </p>
+            </ver>
+            
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                Insert about for your verse here
+       
+        </p>
+            </ver>
+            
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                Insert about for your verse here
+       
+        </p>
+            </ver>
+        
+        </div>  <!-- To put in more verses, look for "BASE CODES" below and copy the code from the verses section and paste it above the </div>-->
+    </swoop>
+    
+    <swoop>     <!-- ABOUT / RELATIONSHIPS -->
+        <h4>Bonds</h4>
+        <div class="about-box">
+       
+           <rel>
+            <a class="rel1" href="https://URL.tumblr.com" title="URL">✩</a>
+            <a class="rel2" href="/tagged/SHIPTAG" title="bond tag">♡</a>
+            <img src="https://via.placeholder.com/75"/>
+           
+            <h2>Name</h2>
+            <p><b>Position:</b>
+            <br>    Main/AU/ALT/EXCLUSIVE/WISHLIST  </p>
+            <pre>
+                Put a small about here. Or long. Go wild. I won't judge.
+            </pre>
+        </rel>
+        
+        <rel>
+            <a class="rel1" href="https://URL.tumblr.com" title="URL">✩</a>
+            <a class="rel2" href="/tagged/SHIPTAG" title="bond tag">♡</a>
+            <img src="https://via.placeholder.com/75"/>
+           
+            <h2>Name</h2>
+            <p><b>Position:</b>
+            <br>    Main/AU/ALT/EXCLUSIVE/WISHLIST  </p>
+            <pre>
+                Put a small about here. Or long. Go wild. I won't judge.
+            </pre>
+        </rel>
+        
+        </div> <!-- To put in more relationships, look for "BASE CODES" below and copy the code from the Relationships section and paste it above the </div>-->
+    </swoop>
+    
+    <swoop> <!-- ABOUT / NAVIGATION -->
+        
+        <h4>Navigation</h4>
+        <div class="navigator">
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+        </div>
+        
+    </swoop>
+</div>
+</bio></click>
+
+<click><div class="biobox1">
+    <div class="about-box">
+        <h4>About</h4>
+        
+        <table>
+        <!-- Fill in the basics of your muse here. Feel free to remove or edit to your hearts content! -->
+        
+        <tr><th>Name:</th>      
+            <td>    Kimi </td></tr>
+
+        <tr><th>Birthday:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Gender:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Quirk:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Affiliation:</th>      
+            <td>    INSERT HERE </td></tr>
+            
+        <tr><th>Preference:</th>      
+            <td>    INSERT HERE </td></tr>
+    </table>
+    
+    <hr>
+    <h2 style="text-transform:lowercase;">❝ QUOTE ❞</h2>
+    
+    <div class="dropdown">
+        <p class="drop_title">  Appearance  ✧</p>
+            <div class="drop_body">
+            <!--insert images   →     <img src="IMG URL"/>    -->
+            
+            Cute as a button.
+
+        </p></div><br>
+        
+        <p class="drop_title">✧  Personality   </p>
+            <div class="drop_body">
+            
+            Whatever you want to be!
+            
+        </p></div><br>
+    </div>
+    
+        </div>
+</div>
+
+<div class="biobox2">
+        <h4>Backstory</h4>
+        <div class="about-box"><p>
+        
+        Kimi Backstory here! ♡
+        
+        </p></div>
+    
+</div>
+
+<div class="biobox3">
+         <hit id="tab">
+            <div id="bbox"><bio id="toggles">
+            <!-- This is the navigation within your about page. Feel free to replace the symbols with text or other symbols.      -->
+              <swoop class="active" title="Verses">◑</swoop>
+              <swoop title="Bonds">⬤</swoop>
+              <swoop title="Links">◐</swoop>
+            </bio></div>
+    
+<bio id="toggle">      
+    <swoop class="active">      <!-- ABOUT / Verses -->
+        <h4>Verses</h4>
+        <div class="about-box">
+        
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                KIMI: Insert about for your verse here
+       
+        </p>
+            </ver>
+            
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                Insert about for your verse here
+       
+        </p>
+            </ver>
+            
+            <ver>
+                <div class="topbar">
+                <b>Position:</b>    Main    
+    &emsp;&emsp;<b>Timeline:</b>    Canon  
+                </div><p>
+                <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+                
+                Insert about for your verse here
+       
+        </p>
+            </ver>
+        
+        </div>  <!-- To put in more verses, look for "BASE CODES" below and copy the code from the verses section and paste it above the </div>-->
+    </swoop>
+    
+    <swoop>     <!-- ABOUT / RELATIONSHIPS -->
+        <h4>Bonds</h4>
+        <div class="about-box">
+       
+           <rel>
+            <a class="rel1" href="https://URL.tumblr.com" title="URL">✩</a>
+            <a class="rel2" href="/tagged/SHIPTAG" title="bond tag">♡</a>
+            <img src="https://via.placeholder.com/75"/>
+           
+            <h2>Name</h2>
+            <p><b>Position:</b>
+            <br>    Main/AU/ALT/EXCLUSIVE/WISHLIST  </p>
+            <pre>
+                Put a small about here. Or long. Go wild. I won't judge.
+            </pre>
+        </rel>
+        
+        <rel>
+            <a class="rel1" href="https://URL.tumblr.com" title="URL">✩</a>
+            <a class="rel2" href="/tagged/SHIPTAG" title="bond tag">♡</a>
+            <img src="https://via.placeholder.com/75"/>
+           
+            <h2>Name</h2>
+            <p><b>Position:</b>
+            <br>    Main/AU/ALT/EXCLUSIVE/WISHLIST  </p>
+            <pre>
+                Put a small about here. Or long. Go wild. I won't judge.
+            </pre>
+        </rel>
+        
+        </div> <!-- To put in more relationships, look for "BASE CODES" below and copy the code from the Relationships section and paste it above the </div>-->
+    </swoop>
+    
+    <swoop> <!-- ABOUT / NAVIGATION -->
+        
+        <h4>Navigation</h4>
+        <div class="navigator">
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+        </div>
+        
+    </swoop>
+
+</bio></click>
+
+            </hit></div></div>
+        </div> <!-- CONTAINER END -->
+    </div>
+</main>
+</body>
+
+                            <!-- CREDIT POP UP -->
+    <div id="credit" class="popup_block">
+    <div class="pop_content">
+    <h1>Credits</h1>
+    <h3>Graphics</h3>
+            Image credits to:
+        <ul>
+            <li>Background @ <a href="https://unsplash.com/photos/51iM389LEuI">RedTigerK on Unsplash</a>
+        </ul>
+        
+        <p><b>Theme PSD:</b> custom made by whateverhtml<br>
+    
+    
+                    <!-- DO NOT TOUCH BELOW! -->
+    <h3>HTML + CSS</h3>
+            <p><b>Tumblr HTML + CSS code by Lucy</b>
+            <br><b>Sorting script</b> by <a href="https://magnusthemes.tumblr.com/post/171696773190/isotope-combination-filtering">Magnusthemes</a>
+            <p>(c) 2021 @ <a href="https://whateverhtml.tumblr.com/post/189725340083/heeello-everyone-it-has-been-a-while-since-i">whateverhtml</a> on tumblr
+    </div></div> <!-- DO NOT TOUCH THE ABOVE! -->
+
+
+<script src="https://mrstincan.github.io/javascripted/jquery.min.js"></script>
+<script src="https://mrstincan.github.io/javascripted/jquery.style-my-tooltips.js"></script>
+<script src="https://mrstincan.github.io/javascripted/tooltip.js"></script>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+<script src="https://mrstincan.github.io/javascripted/sortinghat.js"></script>
+<script src="https://mrstincan.github.io/javascripted/popups.js"></script>
+<script src="https://mrstincan.github.io/javascripted/dropdown.js"></script>
+<script src="https://mrstincan.github.io/javascripted/hittabs.js"></script>
+<script src="https://mrstincan.github.io/javascripted/biotabs.js"></script>
+
+<script src="https://kit.fontawesome.com/e1df5d8c94.js" crossorigin="anonymous"></script>
+
+
+</html>
+                        <!--  BASE CODES -->
+
+<!--
+
+        *| DROPDOWN - text body version
+
+    <div class="dropdown">
+        <p class="drop_title">Title</p>
+            <div class="drop_body">
+            Lore Ipsum motherfucker
+        </p></div><br>
+        
+        <p class="drop_title">Title</p>
+            <div class="drop_body">
+            Lore Ipsum motherfucker
+        </p></div><br>
+    </div>
+
+        
+        
+        *| TABLE
+        
+    <table>
+        <tr><th>Text:</th>      
+            <td>Insert here</td></tr>
+            
+        <tr><th>Text:</th>      
+            <td>Insert here</td></tr>
+        
+        <tr><th>Text:</th>      
+            <td>Insert here</td></tr>
+        
+        <tr><th>Text:</th>      
+            <td>Insert here</td></tr>
+        
+        <tr><th>Text:</th>      
+            <td>Insert here</td></tr>
+        
+        <tr><th>Text:</th>      
+            <td>Insert here</td></tr>
+        
+        <tr><th>Text:</th>      
+            <td>Insert here</td></tr>
+        
+        <tr><th>Text:</th>      
+            <td>Insert here</td></tr>
+    </table>
+    
+        
+        
+        
+        *| RELATIONSHIPS
+    
+    <rel>
+        <a class="rel1" href="https://URL.tumblr.com" title="URL">✩</a>
+        <a class="rel2" href="/tagged/SHIPTAG" title="bond tag">♡</a>
+        <img src="https://via.placeholder.com/75"/>
+       
+        <h2>Name</h2>
+        <p><b>Position:</b>
+        <br>    Main/AU/ALT/EXCLUSIVE/WISHLIST  </p>
+        <pre>
+            Put a small about here. Or long. Go wild. I won't judge.
+        </pre>
+    </rel>
+    
+        
+        
+        *| VERSES
+        
+    <ver>
+    <div class="topbar">
+            <b>Position:</b>    Main    
+&emsp;&emsp;<b>Timeline:</b>    Canon  
+
+    </div><p>
+        <a class="vertag" href="/tagged/VERSE TAG">verse tag</a>
+        Insert about for your verse here
+       
+        </p>
+    </ver>
+
+
+        *| Navigation
+        
+        <div class="navigator">
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+            <a href="/tagged/TAG">TAG</a>
+        </div>
+
+
+        *| CODING LIFEHACKS!
+ 
+        insert a link:      <a href="URL">text</a>
+        insert an image:    <img src="image URL"/>
+        bold text:          <b> text </b> or <strong> text </strong>
+        italics:            <i> text </i> or <em> text </em>
+        underline:          <u> text </u> or <underline> text </underline>
+        strike through:     <strike> text </strike>
+        paragraphs:         <p> text text text </p>
+        line breaks         <br>
+        horizontal line:    <hr>
+        headlines:          <h1>Headline 1</h1>
+                            <h2>Headline 2</h2> <- default tumblr headline
+                            <h3>Headline 3</h3>
+                           
+        LISTS
+       
+        numbered lists (circle)
+       
+            <ol>
+            <li>Text</li>
+            <li>Text</li>
+            <li>Text</li>
+            </ol>
+       
+        bullet point lists (stars)
+       
+            <ul>
+            <li>Text</li>
+            <li>Text</li>
+            <li>Text</li>
+            </ul>
+
+
+
+
+
+                            END OF HTML! -->

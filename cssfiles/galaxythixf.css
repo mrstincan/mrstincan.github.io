@@ -84,25 +84,25 @@ main {
 
 .container1 {
     background:rgba(50,105,200,0);
-    overflow:hidden;
+    overflow:auto;
 
 }
 
 .container2 {
     background:rgba(100,150,200,0);
-    overflow:hidden;
+    overflow:auto;
 
 }
 
 .container3 {
     background:rgba(100,105,200,0);
-    overflow:hidden;
+    overflow:auto;
 
 }
 
 .container4 {
     background:rgba(100,105,50,0);
-    overflow:hidden;
+    overflow:auto;
 }
 
 

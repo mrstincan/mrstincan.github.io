@@ -55,7 +55,74 @@ for(let i = 0;i < buttons.length;i++) {
 </head>
 
     <style type="text/css">
+:root {
+    --fontsize:12px; /* Font Size for most if not all universally readable bodys/posts/containers etc*/
+    --fontsmall:10px; /* smaller fontsize for smaller things */
+    
+    --background: url('https://images.unsplash.com/photo-1560147000-ae4cab65f12b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    --divider:  url('https://images.unsplash.com/photo-1560147000-ae4cab65f12b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    
+    --padding:14px;
+    --pad2:calc(var(--padding) * 2);
+    
+    --width:calc(1212px - var(--pad2));  
+    --sides:300px;
+    --height:700px; 
+    
+    --posv:35px; /* the VERTICAL position /top-bottom/ of your container*/
+    --posh:35px; /* the HORIZONTAL position /left-right/ of your container*/
+    
+    
+    /*  Customize the colors of your theme! 
+    you can put any HEX, RGB/RGBA color code here!  */
 
+    --bgcolor: rgba(255,250,250,1); /*  background colour */
+    --text: rgba(214, 152, 180,1);        /* text colour */
+    --bold: rgba(173, 48, 104,1);        /* bold text colour */
+    --italics: rgba(173, 48, 104,1);     /* italics text colour */
+    --link: rgba(156, 33, 68,1);           /* link colours */
+    --hover: rgba(34,57,92,1);       /* links on hover colour */
+    
+    --border:rgba(214, 152, 180,1);   /* color of all bordrs */
+    
+    --museinfo:rgba(214, 152, 180,1);
+    --shadow:rgba(133, 82, 97,1);   /* colour of text and box-shadows */
+    
+    
+    /* Customize how your tooltip looks like! (when you hover over link)*/
+    --font:'Merienda One', cursive;        /*  The font you use    */
+    --fontsz:25px;              /*  The fontsize    */
+    --tooltip:#fff;     /*  the colour of the text  */
+    --toolborder:rgba(163, 82, 105,1); /*  the outline/border color*/ 
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0em;
+    padding: 0em;
+}
+
+
+body {
+    background:var(--bgcolor);    
+    color:var(--text);
+    font-family: 'Noto Serif', serif;
+    text-align:justify;
+    background-image:var(--background);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size:var(--fontsize);
+    text-shadow:none;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    margin: 0em;
+    padding: 0em;
+}
+        
 nav {
     display: flex;
     flex-direction: column;

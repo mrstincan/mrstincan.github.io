@@ -3,6 +3,7 @@ html {
     width: 100%;
     margin: 0em;
     padding: 0em;
+    scroll-behavior: smooth;
 }
 
 

@@ -72,12 +72,12 @@ main {
 }
 
 .scrollPlane {
-    position: relative;
+    position:static;
     height: 100%;
 }
 
 .scrollPlane > div {
-    position: relative;
+    position:static;
     height: 100%;
 }
 

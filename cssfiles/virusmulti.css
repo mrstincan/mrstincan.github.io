@@ -72,7 +72,7 @@ main {
 }
 
 .scrollPlane {
-    position: relative;
+    position: fixed;
     height: 100%;
 }
 

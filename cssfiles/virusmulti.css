@@ -23,7 +23,6 @@ body {
     width: 100%;
     margin: 0em;
     padding: 0em;
-    overflow:auto;
 }
 
 nav {
@@ -69,42 +68,40 @@ nav > button {
 main {
     margin: 0.3em;
     flex: 1;
-    overflow: auto;
+    overflow:scroll;
 }
 
 .scrollPlane {
     position:relative;
     height: 100%;
-    overflow: auto;
 }
 
 .scrollPlane > div {
     position:relative;
     height: 100%;
-    overflow: auto;
 }
 
 .container1 {
     background:rgba(50,105,200,0);
-    overflow: auto;
+    overflow: hidden;
 
 }
 
 .container2 {
     background:rgba(100,150,200,0);
-    overflow: auto;
+    overflow: hidden;
 
 }
 
 .container3 {
     background:rgba(100,105,200,0);
-    overflow: auto;
+    overflow: hidden;
 
 }
 
 .container4 {
     background:rgba(100,105,50,0);
-    overflow:hidden;
+    overflow: hidden;
 }
 
 

@@ -80,6 +80,7 @@ main {
 .scrollPlane > div {
     position: relative;
     height: 100%;
+    overflow:auto;
 }
 
 .container1 {

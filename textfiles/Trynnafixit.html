@@ -55,7 +55,8 @@ for(let i = 0;i < buttons.length;i++) {
 </head>
 
     <style type="text/css">
-        nav {
+
+nav {
     display: flex;
     flex-direction: column;
     background:var(--bgcolor);    
@@ -94,6 +95,14 @@ nav > button {
       1px 0px 0px var(--bgcolor),
       -1px 0px 0px var(--bgcolor);
 }
+
+main {
+    margin: 0.3em;
+    flex: 1;
+    overflow:scroll;
+    scroll-behavior: smooth;
+}
+        
 
 .scrollPlane {
     position: relative;
@@ -139,14 +148,14 @@ nav > button {
         <button id="button3"> <i class="fas fa-bars" title="muses"></i></button>
         <button id="button4"> <i class="fas fa-heart" title="test 4"></i> </button>
     </nav>
-
+<main>
     <div class="scrollPlane">
         <div class="container1"></div>
         <div class="container2"></div>
         <div class="container3"></div>
         <div class="container4"></div>
     </div>
-
+    </main>
 </body>
 
 </html>

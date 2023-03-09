@@ -77,7 +77,7 @@ main {
 }
 
 .scrollPlane > div {
-    position: relative;
+    position: fixed;
     height: 100%;
 }
 
